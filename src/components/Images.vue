@@ -1,17 +1,19 @@
 <template>
-    <section class="container mx-auto px-4 py-16">
-      <div class="flex flex-col md:flex-row gap-6">
-        <img
-          src="../assets/salon.png"
-          alt="Image 1"
-          class="w-full md:w-1/2 object-cover max-h-[520px] max-w-[520px] mx-auto"
-        />
-        <img
-          src="../assets/terrasse.png"
-          alt="Image 2"
-          class="w-full md:w-1/2 object-cover max-h-[520px] max-w-[520px] mx-auto"
-        />
-      </div>
+    <section class="container mx-auto px-4 py-16 max-w-[1250px]">
+        <div class="flex flex-col md:flex-row gap-20 justify-center items-center">
+            
+            <!-- Image 1 -->
+            <div class="relative w-full md:w-[520px] h-[520px]">
+                <img src="../assets/salon.png" alt="Image 1" class="object-cover w-full h-full" />
+                <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 to-transparent" />
+            </div>
+
+            <!-- Image 2 -->
+            <div class="relative w-full md:w-[520px] h-[520px] md:translate-y-24">
+                <img src="../assets/terrasse.png" alt="Image 2" class="object-cover w-full h-full" />
+                <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 to-transparent" />
+            </div>
+
+        </div>
     </section>
-  </template>
-  
+</template>

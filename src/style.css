@@ -13,4 +13,10 @@ p {
   line-height: 1.5;
   color: #ffffff;
 }
+h2 {
+  font-family: 'Lora', sans-serif;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 400;
+}
 

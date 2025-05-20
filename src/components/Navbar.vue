@@ -18,11 +18,11 @@
         'md:flex'
       ]">
         <a href="#lappartement" @click.prevent="scrollToSection('#home')"
-          class="text-white hover:text-black font-light uppercase text-xl">L'Appartement</a>
+        class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">L'Appartement</a>
         <a href="#equipements" @click.prevent="scrollToSection('#about')"
-          class="text-white hover:text-black font-light uppercase text-xl">Equipements</a>
+        class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Equipements</a>
         <a href="#faq" @click.prevent="scrollToSection('#services')"
-          class="text-white hover:text-black font-light uppercase text-xl">FAQ</a>
+        class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">FAQ</a>
       </nav>
 
       <!-- Logo -->

@@ -10,8 +10,9 @@ export default defineConfig({
     tailwindcss(),
   ],
   resolve:{
-    alias:{
-      '@': fileURLToPath(new URL('.src', import.meta.url))
-    }
+    alias: {
+  '@': fileURLToPath(new URL('./src', import.meta.url)) // ✅ CORRECT
+}
+
   }
 })

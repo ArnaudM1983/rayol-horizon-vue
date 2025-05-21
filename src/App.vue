@@ -9,6 +9,9 @@
     <FullWidthSlider />
     <Map />
     <Equipement />
+    <Banner />
+    <QuestionsFrequentes />
+    <ScrollingBanner />
 
     <section id="services" class="min-h-screen bg-gray-100 flex items-center justify-center">
       <h1 class="text-4xl font-bold">Services</h1>
@@ -29,4 +32,7 @@ import ImageTextSection from './components/ImageTextSection.vue'
 import FullWidthSlider from './components/FullWidthSlider.vue'
 import Map from './components/Map.vue'
 import Equipement from './components/Equipement.vue'
+import Banner from './components/Banner.vue'
+import QuestionsFrequentes from './components/QuestionsFrequentes.vue'
+import ScrollingBanner from './components/ScrollingBanner.vue'
 </script>

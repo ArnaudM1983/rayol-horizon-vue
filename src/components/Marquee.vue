@@ -18,48 +18,42 @@
   </template>
   
   <script setup>
-  import { ref, onMounted, onUnmounted } from "vue";
-  
-  const offset = ref(0);
-  const marquee = ref(null);
-  let width = 0;
-  
-  let lastScrollY = window.scrollY;
-  let animationFrameId;
-  
-  const handleScroll = () => {
-    const currentY = window.scrollY;
-    const delta = currentY - lastScrollY;
-  
-    offset.value -= delta * 0.5; // ajuster la sensibilité au scroll ici
-    lastScrollY = currentY;
-  
-    // limiter l'offset pour éviter d'aller trop loin dans un sens (optionnel)
-    if (offset.value > 0) offset.value = 0;
-  };
-  
-  const animate = () => {
-    offset.value -= 0.8; // vitesse auto scroll
-  
-    // Remise à zéro quand décalage dépasse la moitié (pour boucle)
-    if (Math.abs(offset.value) >= width / 2) {
-      offset.value += width / 2; // repositionner vers la droite pour boucle fluide
-    }
-  
-    animationFrameId = requestAnimationFrame(animate);
-  };
-  
-  onMounted(() => {
-    width = marquee.value.offsetWidth;
-    window.addEventListener("scroll", handleScroll);
-    animate();
-  });
-  
-  onUnmounted(() => {
-    window.removeEventListener("scroll", handleScroll);
-    cancelAnimationFrame(animationFrameId);
-  });
-  </script>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const offset = ref(0);         // Position visible (affichée)
+const targetOffset = ref(0);   // Destination basée sur scroll
+const marquee = ref(null);
+
+let lastScrollY = 0;
+let animationFrameId;
+
+const handleScroll = () => {
+  const currentY = window.scrollY;
+  const delta = currentY - lastScrollY;
+
+  targetOffset.value -= delta * 0.5; // sensibilité ajustable
+  lastScrollY = currentY;
+};
+
+const animate = () => {
+  offset.value += (targetOffset.value - offset.value) * 0.1; // interpolation
+  animationFrameId = requestAnimationFrame(animate);
+};
+
+onMounted(() => {
+  lastScrollY = window.scrollY;   // initialise la position réelle du scroll
+  handleScroll();                 // déclenche une première mise à jour immédiate
+  window.addEventListener("scroll", handleScroll);
+  animate();
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+  cancelAnimationFrame(animationFrameId);
+});
+</script>
+
+
   
   <style scoped>
   span {

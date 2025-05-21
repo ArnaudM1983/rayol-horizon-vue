@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-[1250px] mx-auto text-white">
+    <section class="max-w-[1250px] mx-auto text-white" id="faq">
         <h2 class="text-3xl mb-10 md:text-6xl font-semibold text-white sm:text-3xl text-left">
             Questions Fréquentes
         </h2>
@@ -26,7 +26,7 @@
                             {{ openIndex === index ? '−' : '+' }}
                         </span>
                     </div>
-                    <div v-if="openIndex === index" class="mt-6 text-gray-300 transition-all text-left">
+                    <div v-if="openIndex === index" class="mt-6 mb-2 text-gray-300 transition-all text-left">
                         {{ faq.answer }}
                     </div>
                 </div>

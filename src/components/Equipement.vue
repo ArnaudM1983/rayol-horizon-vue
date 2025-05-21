@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-[1250px] mx-auto py-8">
+    <section class="max-w-[1250px] mx-auto py-8" id="equipements">
         <h2 class="text-3xl mb-8 md:text-6xl font-semibold text-white sm:text-3xl text-left">
             Aperçu de l’appartement
         </h2>

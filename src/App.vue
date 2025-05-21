@@ -11,15 +11,9 @@
     <Equipement />
     <Banner />
     <QuestionsFrequentes />
+    <Contact />
     <ScrollingBanner />
-
-    <section id="services" class="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 class="text-4xl font-bold">Services</h1>
-    </section>
-
-    <section id="contact" class="min-h-screen bg-gray-200 flex items-center justify-center">
-      <h1 class="text-4xl font-bold">Contact</h1>
-    </section>
+    <Footer />
   </main>
 </template>
 
@@ -34,5 +28,7 @@ import Map from './components/Map.vue'
 import Equipement from './components/Equipement.vue'
 import Banner from './components/Banner.vue'
 import QuestionsFrequentes from './components/QuestionsFrequentes.vue'
+import Contact from './components/Contact.vue'
 import ScrollingBanner from './components/ScrollingBanner.vue'
+import Footer from './components/Footer.vue'
 </script>

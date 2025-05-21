@@ -1,6 +1,6 @@
 <template>
     <section
-      class="mt-36 overflow-hidden whitespace-nowrap bg-neutral-900 text-white py-8 border-t border-b border-white"
+      class="mt-36 overflow-hidden whitespace-nowrap bg-neutral-900 text-white py-12 border-t border-b border-gray-500"
     >
       <div
         ref="marquee"

@@ -17,21 +17,22 @@
         isMenuOpen ? 'flex' : 'hidden',
         'md:flex'
       ]">
-        <a href="#lappartement" @click.prevent="scrollToSection('#home')"
-        class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">L'Appartement</a>
-        <a href="#equipements" @click.prevent="scrollToSection('#about')"
-        class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Equipements</a>
-        <a href="#faq" @click.prevent="scrollToSection('#services')"
-        class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">FAQ</a>
+        <a href="#lappartement" @click.prevent="scrollToSection('#lappartement')"
+          class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">L'Appartement</a>
+        <a href="#equipements" @click.prevent="scrollToSection('#equipements')"
+          class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Equipements</a>
+        <a href="#faq" @click.prevent="scrollToSection('#faq')"
+          class="relative text-white font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">FAQ</a>
       </nav>
 
       <!-- Logo -->
       <!-- <div class="text-3xl text-red-500 font-bold">LOGO</div> -->
 
       <!-- Réserver Button -->
-      <button class="text-white border border-white px-6 py-2 text-lg font-light cursor-pointer bg-transparent rounded-none hover:bg-white hover:text-black transition">
-        Réserver
-      </button>
+      <a href="#contact"
+        class="text-white border border-white px-6 py-2 text-lg font-light cursor-pointer bg-transparent rounded-none hover:bg-white hover:text-black transition">
+        Je réserve
+      </a>
     </div>
   </header>
 </template>

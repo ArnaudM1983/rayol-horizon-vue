@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="mx-auto max-w-[1250px] py-16">
+        <div class="mx-auto max-w-[1250px] py-16 px-4 md:px-0">
             <div class="flex flex-col items-center gap-4 rounded-lg shadow-lg sm:flex-row sm:justify-between pb-10">
                 <h2 class="text-3xl md:text-6xl font-semibold text-white sm:text-3xl text-left">
                     Prêt à réserver ?

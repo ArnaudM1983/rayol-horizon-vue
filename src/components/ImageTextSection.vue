@@ -28,24 +28,25 @@ import plage2 from '@/assets/plage2.png'
 
   <!-- Image à droite et Texte à gauche sur desktop -->
   <section>
-    <div class="mx-auto max-w-[1250px] px-4 py-8 sm:px-6 lg:px-0">
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-24">
-        <div>
-          <div class="max-w-lg md:max-w-none text-left">
-            <h2 class="text-3xl md:text-6xl font-semibold text-white sm:text-3xl">
-              Confort pratique
-            </h2>
-            <p class="mt-4">
-              Pensé pour les séjours en couple ou en famille, l’appartement dispose d’une chambre indépendante, d’un séjour lumineux avec canapé convertible, et d’une cuisine entièrement équipée. Tout a été conçu pour que vous vous sentiez comme chez vous, avec confort et simplicité.
-            </p>
-          </div>
-        </div>
-        <div>
-          <img :src="deco" class="" alt="Décoration" />
+  <div class="mx-auto max-w-[1250px] px-4 py-8 sm:px-6 lg:px-0">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-24">
+      <div class="order-2 md:order-1">
+        <div class="max-w-lg md:max-w-none text-left">
+          <h2 class="text-3xl md:text-6xl font-semibold text-white sm:text-3xl">
+            Confort pratique
+          </h2>
+          <p class="mt-4">
+            Pensé pour les séjours en couple ou en famille, l’appartement dispose d’une chambre indépendante, d’un séjour lumineux avec canapé convertible, et d’une cuisine entièrement équipée. Tout a été conçu pour que vous vous sentiez comme chez vous, avec confort et simplicité.
+          </p>
         </div>
       </div>
+      <div class="order-1 md:order-2">
+        <img :src="deco" class="" alt="Décoration" />
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Image à gauche et Texte à droite sur desktop -->
   <section>

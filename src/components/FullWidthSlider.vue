@@ -1,11 +1,10 @@
-
 <template>
-  
   <div class="relative overflow-hidden">
     <div class="wrapper" ref="wrapper">
       <section v-for="(slide, i) in slides" :key="i" class="panel relative">
-        <div class="w-full h-full p-10 relative">
-          <img :src="slide.image" class="w-full h-full object-cover shadow-lg" />
+        <div class="w-full h-full p-4 md:p-10 relative">
+          <img :src="slide.image" class="w-full h-auto min-h-[400px] md:h-full md:max-h-none object-cover shadow-lg"
+          /> />
           <!-- Overlay gradient -->
           <div class="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-neutral-900 to-transparent z-10"></div>
           <!-- Text bottom left -->
@@ -26,7 +25,6 @@
 import { onMounted, ref, nextTick } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import FadeInOnScroll from '@/components/FadeInOnScroll.vue'
 
 import plage from '../assets/chambre.png'
 import cuisine from '../assets/cuisine.png'
@@ -44,38 +42,65 @@ const slides = [
 onMounted(async () => {
   await nextTick()
 
-  const sections = wrapper.value.querySelectorAll('.panel')
+  // Activation GSAP horizontal scroll uniquement sur desktop (min-width: 768px)
+  gsap.matchMedia().add("(min-width: 768px)", () => {
+    const sections = wrapper.value.querySelectorAll('.panel')
 
-  gsap.to(sections, {
-    xPercent: -100 * (sections.length - 1),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: wrapper.value,
-      pin: true,
-      scrub: 0.5,
-      snap: 1 / (sections.length - 1),
-      start: 'top top',
-      end: () => "+=" + wrapper.value.offsetWidth,
-    },
+    return gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: wrapper.value,
+        pin: true,
+        scrub: 0.5,
+        snap: 1 / (sections.length - 1),
+        start: 'top top',
+        end: () => "+=" + wrapper.value.offsetWidth,
+      },
+    })
   })
 })
 </script>
 
 <style scoped>
+
+/* Masquer le texte sur mobile */
+.panel > div > .absolute {
+  display: none;
+}
+
+/* Afficher sur desktop */
+@media (min-width: 768px) {
+  .panel > div > .absolute {
+    display: block;
+  }
+}
+
 .wrapper {
   display: flex;
-  width: 400vw; /* 4 sections * 100vw */
-  height: 100vh;
+  flex-direction: column; /* vertical empilement par défaut */
+  height: auto;
 }
 
 .panel {
-  flex: 0 0 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   position: relative;
 }
 
 .lora-font {
   font-family: 'Lora', serif;
 }
-</style>
 
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row; /* horizontal sur desktop */
+    width: 300vw; /* 3 sections * 100vw */
+    height: 100vh; /* plein écran */
+  }
+  .panel {
+    flex: 0 0 100vw;
+    height: 100vh;
+  }
+}
+</style>

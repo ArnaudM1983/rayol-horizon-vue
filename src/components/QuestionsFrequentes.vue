@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-[1250px] mx-auto text-white" id="faq">
+    <section class="max-w-[1250px] mx-auto text-white px-4 md:px-0" id="faq">
         <h2 class="text-3xl mb-10 md:text-6xl font-semibold text-white sm:text-3xl text-left">
             Questions Fréquentes
         </h2>
@@ -20,7 +20,7 @@
             <!-- Colonne de droite : FAQ -->
             <div class="md:col-span-7 space-y-4">
                 <div v-for="(faq, index) in faqs[selectedTab]" :key="index" class="border-b border-white pb-4">
-                    <div class="flex justify-between items-center cursor-pointer" @click="toggle(index)">
+                    <div class="flex justify-between items-center cursor-pointer text-left" @click="toggle(index)">
                         <h3 class="text-lg font-light py-4">{{ faq.question }}</h3>
                         <span class="text-xl">
                             {{ openIndex === index ? '−' : '+' }}

@@ -1,5 +1,5 @@
 <template>
-    <section class="relative h-screen flex items-end overflow-hidden">
+    <section class="relative h-dvh flex items-end overflow-hidden">
         <!-- Vidéo en arrière-plan -->
         <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
             <source :src="video" type="video/mp4" />

@@ -7,10 +7,6 @@
     </section>
   </template>
   
-  <script setup>
-  // Aucun script nécessaire pour le moment
-  </script>
-  
   <style scoped>
   .parallax {
     background-attachment: fixed;

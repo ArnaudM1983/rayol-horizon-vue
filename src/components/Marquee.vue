@@ -1,6 +1,6 @@
 <template>
     <section
-      class="mt-36 overflow-hidden whitespace-nowrap bg-neutral-900 text-white py-12 border-t border-b border-gray-500"
+      class=" md:mt-36 overflow-hidden whitespace-nowrap bg-neutral-900 text-white py-6 md:py-12 border-t border-b border-gray-500"
     >
       <div
         ref="marquee"
@@ -31,12 +31,12 @@ const handleScroll = () => {
   const currentY = window.scrollY;
   const delta = currentY - lastScrollY;
 
-  targetOffset.value -= delta * 0.5; // sensibilité ajustable
+  targetOffset.value -= delta * 0.5; // sensibilité 
   lastScrollY = currentY;
 };
 
 const animate = () => {
-  offset.value += (targetOffset.value - offset.value) * 0.1; // interpolation
+  offset.value += (targetOffset.value - offset.value) * 0.1; 
   animationFrameId = requestAnimationFrame(animate);
 };
 

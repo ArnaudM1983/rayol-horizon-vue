@@ -1,6 +1,6 @@
 <template>
     <section class="relative overflow-hidden max-w-[1250px] mx-auto">
-      <h2 class="text-3xl mb-8 md:text-6xl font-semibold text-white sm:text-3xl text-left">
+      <h2 class="text-3xl mb-8 md:text-6xl font-semibold text-white sm:text-3xl text-left px-4 sm:px-6">
         Emplacement Idéal
       </h2>
   
@@ -16,7 +16,7 @@
       </div>
   
       <!-- Texte positionné à gauche -->
-      <div class="flex justify-start mt-16 text-left">
+      <div class="flex justify-start mt-16 text-left px-4 sm:px-6">
         <div class="w-full md:w-1/2 pr-4 text-white">
             <p class="text-xl md:text-2xl leading-relaxed">
             Le Rayol-Canadel-sur-Mer offre un cadre naturel exceptionnel entre mer et collines méditerranéennes. Découvrez ses plages préservées, les îles de Porquerolles et Port-Cros à proximité, ainsi que de nombreux sentiers de randonnée pour explorer ce coin de paradis.
